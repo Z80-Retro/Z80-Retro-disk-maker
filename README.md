@@ -9,6 +9,8 @@ existing one.
 
 For example, if you are on the standard Raspberry PI setup then to download some games from [linuxplayground](https://github.com/linuxplayground/nabu-games/releases) and copy them to the SD card slot for drive E: so you run them on your Retro, you can do this:
 
+	git clone https://github.com/Z80-Retro/Z80-Retro-disk-maker.git
+	cd Z80-Retro-disk-maker
 	wget https://github.com/linuxplayground/nabu-games/releases/download/v3.3/nabu-games-z80retro-v3.3.tgz
 	tar zxvf nabu-games-z80retro-v3.3.tgz -C apps
 	make
@@ -79,7 +81,7 @@ the default slot number that can be found in the `Make.default` file.
 For example, one way to create a new `Make.local` file and/or delete any existing one and replace
 it with one line to change the slot number to 5 (for drive F:), you could do this:
 
-	echo "DISK_SLOT=5" > Make.local
+	echo "DISK_SLOT=5" >> Make.local
 
 ## Where to find more CP/M programs for your system
 
