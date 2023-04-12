@@ -1,0 +1,17 @@
+# A set of default values of things that might be of 
+# interest to more than one Makefile.
+
+#DISKDEF=generic-2k-8m
+DISKDEF=generic-8k-8m
+#DISKDEF=generic-16k-8m
+
+# For normal use on a plain Raspberry PI
+SD_DEV=/dev/sda1
+
+# This is used before burning an SD card image to make sure we are on the correct host!
+SD_HOSTNAME=raspberrypi
+
+# Target disk slot on the SD card.
+# By convention, slot 0 would disk A, 1 would disk B and so on.
+# It is unlikely that you will want to ever target slot 0 for this project.
+DISK_SLOT=4

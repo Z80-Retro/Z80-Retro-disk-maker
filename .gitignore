@@ -1,0 +1,6 @@
+Make.local
+*.img
+*.swp
+*.gz
+*.tgz
+*.zip
