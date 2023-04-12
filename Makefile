@@ -5,8 +5,8 @@
 
 all:: disk.img
 
-# assume that there will be one .com file that is built for each .asm file
-PROGS=$(shell find apps -type f)
+# Collect all the files to add to disk.img from the apps directory except for the .gitignore file.
+PROGS=$(shell find apps -type f \( ! -iname ".gitignore" \))
 
 TOP=.
 
