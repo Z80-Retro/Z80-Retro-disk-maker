@@ -4,15 +4,15 @@
 SLOTS=1 2 3 4 5 6 7
 CPM=../2063-Z80-cpm/filesystem/drive.img
 
-# The :: means that if there is more than one of the same target name 
-# then process all the occurrences one after the other.
-all:: $(SLOTS)
-
 TOP=.
 
 # include things that might be of interest to more than just this Makefile
 include $(TOP)/Make.default
 -include $(TOP)/Make.local		# The - on this means ignore it if the file does not exist
+
+# The :: means that if there is more than one of the same target name
+# then process all the occurrences one after the other.
+all:: $(SLOTS)
 
 burn: $(SLOTS:%=images/slot-%.img)
 	@ if [ `hostname` != "$(SD_HOSTNAME)" -o ! -b "$(SD_DEV)" ]; then\
