@@ -11,7 +11,8 @@ SD_DEV=/dev/sda1
 # This is used before burning an SD card image to make sure we are on the correct host!
 SD_HOSTNAME=raspberrypi
 
-# Target disk slot on the SD card.
-# By convention, slot 0 would disk A, 1 would disk B and so on.
-# It is unlikely that you will want to ever target slot 0 for this project.
-DISK_SLOT=4
+# Number of available slots with matching slot-x directories
+# Note: DO NOT USE SLOT 0.  It will overwrite your CPM OS.
+# Override this if you have less than 8 slots.
+SLOTS=1 2 3 4 5 6 7
+
